@@ -1,0 +1,201 @@
+@charset "UTF-8";
+body {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  overflow: hidden;
+}
+.f{
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* login form */
+.forms{
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  text-shadow:0px 0px 50px rgb(34, 255, 0);
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+.box {
+  width: fit-content;
+	border: 2px solid rgba(255, 255, 255, 0.627);
+	border-radius: 6px;
+  height: 430px;
+  width:340px;
+ border-radius: 25px;
+	box-shadow: 0 0px 30px rgba(211, 5, 222, 0.682);
+  position: relative;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+	padding: 5px 20px 30px 20px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	transition: box-shadow 20ms linear;
+}
+label{
+  font-family: "Caveat", cursive;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  color: #22edfc;
+}
+.tag{
+  font-family: "Dancing Script", cursive;
+  font-size: x-large;
+  text-align: center;
+  font-weight: bold;
+  text-shadow:
+  1px 1px 2px black,
+  0 0 1em blue,
+  0 0 0.2em blue;
+  font-size: 20px;
+  font-weight: 900;
+  color: #22edfc;
+}
+input{
+  width: 200px;
+  border-radius: 10px;
+  height: 20px;
+  font-family: "Caveat", cursive;
+  font-size: large;
+  font-weight: bold;
+  background-image: linear-gradient(transparent, aqua);
+  box-shadow: 0px 0px 15px rgb(102, 204, 124);
+
+}
+input:active{
+  box-shadow: 0px 0px 20px gold
+}
+.box:active {
+  box-shadow: 0px 0px 50px gold
+}
+::placeholder{
+  font-family: "Dancing Script", cursive;
+  font-size: medium;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+h1{
+  /* box-shadow: 0px 0px 3px white; */
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background: transparent;
+}
+/*button */
+
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Caveat", cursive;
+  text-align: center;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 40px white;
+  font-size: 20px;
+  font-weight: 600;
+  height: 50px;
+  width: 150px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 20px;
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+  }
+  &:hover:before,
+  &:focus:before{
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:blue;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  
+}
+
+.button:hover .button__icon,
+.button:focus .button__icon {
+  transform: translate3d(10px, -50%, 0);
+}
+
+.button__label {
+  position: relative;
+}
+.p{
+  display: block;
+  font-family: "Dancing Script", cursive;
+  font-size: medium;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-shadow:
+  1px 1px 2px black,
+  0 0 1em blue,
+  0 0 0.2em blue;
+  margin: 0.5em 0;
+  padding: 0.1em 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+.p:hover{
+  color: forestgreen;
+  text-shadow:
+  1px 1px 2px black,
+  0 0 1em yellow,
+  0 0 0.2em yellowgreen;
+}
+a{
+  text-decoration: none !important;
+}
+
+/* rain */
+.rain {
+  margin: 0px;
+  padding: 0px;
+  width: 210wh;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(60deg);
+  background: transparent;
+  height: 210vh; 
+  position: relative;
+  top: -900px;   
+}
+i {
+  position:absolute;
+  height: 160px;
+  background: linear-gradient(transparent, rgb(172, 172, 218));
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  animation: raining 5s linear infinite;
+
+}
+@keyframes raining {
+  0% {
+    transform: translateY(-160px);
+  }
+  100% {
+    transform: translateY(calc(220vh + 160px));
+  }
+} 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <link rel="stylesheet" href="@{https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&display=swap}">
+    <link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap}">
+    <link th:href="@{/css/addnew.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="f">
+        <h1 class="forms">Add New Book</h1>
+        <form action="#" th:action="@{/savebook}" th:object="${book}" method="post">
+            <fieldset class="box">
+            <h1 class="tag">BOOK DETAILS</h1><br>
+            <label for="title">Title of the Book : </label>
+            <input type="text" th:field="*{title}" placeholder="Book Title" id="title" required><br><br><br>
+            <label for="author">Author of the Book : </label>
+            <input type="text" th:field="*{author}" placeholder="Book Author" id="author" required><br><br><br>
+            <label for="genre">Genre of the Book : </label>
+            <input type="text" th:field="*{genre}" placeholder="Book Genre" id="genre" required><br><br><br>
+            <label for="price">Price of the Book : </label>
+            <input type="text" th:field="*{price}"  placeholder="Book Price" id="price" required><br><br>
+            <button type="submit" class="button">
+                <div class="button__label">SUBMIT</div>
+                <div class="button__icon"></div>
+            </button><br>
+            <button type="reset" class="button">
+                <div class="button__label">CANCEL</div>
+                <div class="button__icon"></div>
+            </button>
+            <a th:href="@{/index}"><span class="p">Back To Books List</span></a>
+        </fieldset>
+        </form>
+    </div>
+<div class="rain"></div>
+<script th:src="@{/js/addnew.js}"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Supernova Books</title>
+     <link th:href="@{/css/homepage.css}" rel="stylesheet" type="text/css">   
+</head>
+<body onmousemove="one()">
+<div id="welcome" onmousemove="one()">
+    Let's Explore
+</div>
+<a th:href="@{/index}"><span class="welcome" onmousemove="one()" onclick="two()">
+    BOOKS
+</span></a>
+<div id="blank" onmousemove="one()">
+</div>
+<script th:src="@{/js/homepage.js}"></script>
+</body>
+</html>

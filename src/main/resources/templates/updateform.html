@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Update Book</title>
+<link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap}">
+<link th:href="@{/css/update.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div th:if="${message}">
+    <script th:inline="javascript">
+    alert(`[[${message}]]`);
+    </script>
+    <h1 class="text-center custom-heading" th:text="${message}"></h1>
+</div>
+
+<div class="container">
+<div class="title">
+<h1>Update Book Form</h1>
+</div>
+<form action="#" th:action="@{/updatebook}" th:object="${book}" method="post">
+<div class="user_details">
+<div class="input_box">
+<label for="id">Book ID :</label> <input type="text" id="id" th:field="*{id}" placeholder="Book ID" readonly="true">
+</div>
+<div class="input_box">
+<label for="title">Title of the Book :</label> <input type="text" id="title" th:field="*{title}" placeholder="Book Title">
+</div>
+<div class="input_box">
+<label for="author">Author of the Book : </label> <input type="text" id="author" th:field="*{author}" placeholder="Author Name">
+</div>
+<div class="input_box">
+<label for="genre">Genre of the Book : </label> <input type="text" id="genre" th:field="*{genre}" placeholder="Book Genre">
+</div>
+<div class="input_box">
+<label for="price">Price of the Book : </label>  <input type="text" id="price" th:field="*{price}" placeholder="Price">
+</div>
+</div>
+<div class="reg_btn">
+<button class="pen" type="submit"><span class="ptwo">Update</span></button>
+</div>
+</form>
+<div class="reg_btn">
+<a th:href="@{/index}" class="pen"><span class="pone">Dash Board</span></a>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+body{
+    background-image: url('/images/bookshome.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none !important;
+}
+#welcome{
+    position: relative;
+    width: 40%;
+    height: 20vh;
+    margin-top:20vh;
+    left: 10%;
+    color: white;
+    font-style: italic;
+    font-family: cursive;
+    font-size: 6vw;
+    text-shadow: 0px 0px 35px blueviolet;
+}
+.welcome{
+    position: relative;
+    width: 40%;
+    height: 25vh;
+    left: 10%;
+    font-style: italic;
+    color: white;
+    font-family: cursive;
+    font-size: 10vw;
+    text-shadow: 0px 0px 35px aqua;
+    animation: color 3s ease-in-out infinite;
+}
+@keyframes color {
+    from{
+        filter: hue-rotate(0deg)
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+#blank{
+    position: relative;
+    height: 20vh;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    #welcome {
+        font-size: 8vw;
+    }
+    .welcome {
+        font-size: 12vw;
+        height: 30vh;
+    }
+    #blank {
+        height: 15vh;
+    }
+}
+@media screen and (max-width: 480px) {
+    #welcome {
+        font-size: 10vw;
+    }
+    .welcome {
+        font-size: 15vw;
+        height: 35vh;
+    }
+    #blank {
+        height: 10vh;
+    }
+}
